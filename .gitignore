@@ -1,0 +1,6 @@
+kernel/linux-5.15/
+kernel/*.tar.xz
+uboot/u-boot-2022.04/
+uboot/*.tar.bz2
+rootfs/busybox-1.35.0/
+rootfs/*.tar.bz2
