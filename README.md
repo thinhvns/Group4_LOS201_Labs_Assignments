@@ -1,8 +1,11 @@
 # Embedded Linux Lab 01 - ARMv7
 
 ## Student
-- MSSV: SE203340
-- Name: DuongDucThinh
+## Student
+- DuongDucThinh - MSSV: SE203340
+- TranNguyenHaiDang - MSSV: SE202009
+- NguyenXuanPhu - MSSV: SE203361
+- NguyenNgoAnhVu - MSSV: SE203026
 
 ## Lab
 Embedded Linux - Kernel Configuration & Boot System
