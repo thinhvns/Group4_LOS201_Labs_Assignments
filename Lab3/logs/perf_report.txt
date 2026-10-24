@@ -1,0 +1,1980 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 2  of event 'cpu_atom/cycles/P'
+# Event count (approx.): 249998
+#
+# Children      Self  Command      Shared Object      Symbol                            
+# ........  ........  ...........  .................  ..................................
+#
+   100.00%     0.00%  perf_target  [unknown]          [k] 0x00007a41ee0ef03b
+            |
+            ---0x7a41ee0ef03b
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_execve
+               do_execveat_common.isra.0
+               bprm_execve
+               bprm_execve.part.0
+               exec_binprm
+               load_elf_binary
+               |          
+               |--50.00%--elf_load
+               |          asm_exc_page_fault
+               |          exc_page_fault
+               |          do_user_addr_fault
+               |          handle_mm_fault
+               |          __handle_mm_fault
+               |          handle_pte_fault
+               |          do_fault
+               |          __vmf_anon_prepare
+               |          __anon_vma_prepare
+               |          find_mergeable_anon_vma
+               |          
+                --50.00%--create_elf_tables
+                          get_random_bytes
+                          _get_random_bytes
+                          crng_make_state
+                          crng_fast_key_erasure
+                          chacha_permute
+
+   100.00%     0.00%  perf_target  [kernel.kallsyms]  [.] entry_SYSCALL_64_after_hwframe
+            |
+            ---entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_execve
+               do_execveat_common.isra.0
+               bprm_execve
+               bprm_execve.part.0
+               exec_binprm
+               load_elf_binary
+               |          
+               |--50.00%--elf_load
+               |          asm_exc_page_fault
+               |          exc_page_fault
+               |          do_user_addr_fault
+               |          handle_mm_fault
+               |          __handle_mm_fault
+               |          handle_pte_fault
+               |          do_fault
+               |          __vmf_anon_prepare
+               |          __anon_vma_prepare
+               |          find_mergeable_anon_vma
+               |          
+                --50.00%--create_elf_tables
+                          get_random_bytes
+                          _get_random_bytes
+                          crng_make_state
+                          crng_fast_key_erasure
+                          chacha_permute
+
+   100.00%     0.00%  perf_target  [kernel.kallsyms]  [.] do_syscall_64
+            |
+            ---do_syscall_64
+               x64_sys_call
+               __x64_sys_execve
+               do_execveat_common.isra.0
+               bprm_execve
+               bprm_execve.part.0
+               exec_binprm
+               load_elf_binary
+               |          
+               |--50.00%--elf_load
+               |          asm_exc_page_fault
+               |          exc_page_fault
+               |          do_user_addr_fault
+               |          handle_mm_fault
+               |          __handle_mm_fault
+               |          handle_pte_fault
+               |          do_fault
+               |          __vmf_anon_prepare
+               |          __anon_vma_prepare
+               |          find_mergeable_anon_vma
+               |          
+                --50.00%--create_elf_tables
+                          get_random_bytes
+                          _get_random_bytes
+                          crng_make_state
+                          crng_fast_key_erasure
+                          chacha_permute
+
+   100.00%     0.00%  perf_target  [kernel.kallsyms]  [.] x64_sys_call
+            |
+            ---x64_sys_call
+               __x64_sys_execve
+               do_execveat_common.isra.0
+               bprm_execve
+               bprm_execve.part.0
+               exec_binprm
+               load_elf_binary
+               |          
+               |--50.00%--elf_load
+               |          asm_exc_page_fault
+               |          exc_page_fault
+               |          do_user_addr_fault
+               |          handle_mm_fault
+               |          __handle_mm_fault
+               |          handle_pte_fault
+               |          do_fault
+               |          __vmf_anon_prepare
+               |          __anon_vma_prepare
+               |          find_mergeable_anon_vma
+               |          
+                --50.00%--create_elf_tables
+                          get_random_bytes
+                          _get_random_bytes
+                          crng_make_state
+                          crng_fast_key_erasure
+                          chacha_permute
+
+   100.00%     0.00%  perf_target  [kernel.kallsyms]  [.] __x64_sys_execve
+            |
+            ---__x64_sys_execve
+               do_execveat_common.isra.0
+               bprm_execve
+               bprm_execve.part.0
+               exec_binprm
+               load_elf_binary
+               |          
+               |--50.00%--elf_load
+               |          asm_exc_page_fault
+               |          exc_page_fault
+               |          do_user_addr_fault
+               |          handle_mm_fault
+               |          __handle_mm_fault
+               |          handle_pte_fault
+               |          do_fault
+               |          __vmf_anon_prepare
+               |          __anon_vma_prepare
+               |          find_mergeable_anon_vma
+               |          
+                --50.00%--create_elf_tables
+                          get_random_bytes
+                          _get_random_bytes
+                          crng_make_state
+                          crng_fast_key_erasure
+                          chacha_permute
+
+   100.00%     0.00%  perf_target  [kernel.kallsyms]  [.] do_execveat_common.isra.0
+            |
+            ---do_execveat_common.isra.0
+               bprm_execve
+               bprm_execve.part.0
+               exec_binprm
+               load_elf_binary
+               |          
+               |--50.00%--elf_load
+               |          asm_exc_page_fault
+               |          exc_page_fault
+               |          do_user_addr_fault
+               |          handle_mm_fault
+               |          __handle_mm_fault
+               |          handle_pte_fault
+               |          do_fault
+               |          __vmf_anon_prepare
+               |          __anon_vma_prepare
+               |          find_mergeable_anon_vma
+               |          
+                --50.00%--create_elf_tables
+                          get_random_bytes
+                          _get_random_bytes
+                          crng_make_state
+                          crng_fast_key_erasure
+                          chacha_permute
+
+   100.00%     0.00%  perf_target  [kernel.kallsyms]  [.] bprm_execve
+            |
+            ---bprm_execve
+               bprm_execve.part.0
+               exec_binprm
+               load_elf_binary
+               |          
+               |--50.00%--elf_load
+               |          asm_exc_page_fault
+               |          exc_page_fault
+               |          do_user_addr_fault
+               |          handle_mm_fault
+               |          __handle_mm_fault
+               |          handle_pte_fault
+               |          do_fault
+               |          __vmf_anon_prepare
+               |          __anon_vma_prepare
+               |          find_mergeable_anon_vma
+               |          
+                --50.00%--create_elf_tables
+                          get_random_bytes
+                          _get_random_bytes
+                          crng_make_state
+                          crng_fast_key_erasure
+                          chacha_permute
+
+   100.00%     0.00%  perf_target  [kernel.kallsyms]  [.] bprm_execve.part.0
+            |
+            ---bprm_execve.part.0
+               exec_binprm
+               load_elf_binary
+               |          
+               |--50.00%--elf_load
+               |          asm_exc_page_fault
+               |          exc_page_fault
+               |          do_user_addr_fault
+               |          handle_mm_fault
+               |          __handle_mm_fault
+               |          handle_pte_fault
+               |          do_fault
+               |          __vmf_anon_prepare
+               |          __anon_vma_prepare
+               |          find_mergeable_anon_vma
+               |          
+                --50.00%--create_elf_tables
+                          get_random_bytes
+                          _get_random_bytes
+                          crng_make_state
+                          crng_fast_key_erasure
+                          chacha_permute
+
+   100.00%     0.00%  perf_target  [kernel.kallsyms]  [.] exec_binprm
+            |
+            ---exec_binprm
+               load_elf_binary
+               |          
+               |--50.00%--elf_load
+               |          asm_exc_page_fault
+               |          exc_page_fault
+               |          do_user_addr_fault
+               |          handle_mm_fault
+               |          __handle_mm_fault
+               |          handle_pte_fault
+               |          do_fault
+               |          __vmf_anon_prepare
+               |          __anon_vma_prepare
+               |          find_mergeable_anon_vma
+               |          
+                --50.00%--create_elf_tables
+                          get_random_bytes
+                          _get_random_bytes
+                          crng_make_state
+                          crng_fast_key_erasure
+                          chacha_permute
+
+   100.00%     0.00%  perf_target  [kernel.kallsyms]  [.] load_elf_binary
+            |
+            ---load_elf_binary
+               |          
+               |--50.00%--elf_load
+               |          asm_exc_page_fault
+               |          exc_page_fault
+               |          do_user_addr_fault
+               |          handle_mm_fault
+               |          __handle_mm_fault
+               |          handle_pte_fault
+               |          do_fault
+               |          __vmf_anon_prepare
+               |          __anon_vma_prepare
+               |          find_mergeable_anon_vma
+               |          
+                --50.00%--create_elf_tables
+                          get_random_bytes
+                          _get_random_bytes
+                          crng_make_state
+                          crng_fast_key_erasure
+                          chacha_permute
+
+    50.00%    50.00%  perf_target  [kernel.kallsyms]  [k] find_mergeable_anon_vma
+            |
+            ---0x7a41ee0ef03b
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_execve
+               do_execveat_common.isra.0
+               bprm_execve
+               bprm_execve.part.0
+               exec_binprm
+               load_elf_binary
+               elf_load
+               asm_exc_page_fault
+               exc_page_fault
+               do_user_addr_fault
+               handle_mm_fault
+               __handle_mm_fault
+               handle_pte_fault
+               do_fault
+               __vmf_anon_prepare
+               __anon_vma_prepare
+               find_mergeable_anon_vma
+
+    50.00%    50.00%  perf_target  [kernel.kallsyms]  [k] chacha_permute
+            |
+            ---0x7a41ee0ef03b
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_execve
+               do_execveat_common.isra.0
+               bprm_execve
+               bprm_execve.part.0
+               exec_binprm
+               load_elf_binary
+               create_elf_tables
+               get_random_bytes
+               _get_random_bytes
+               crng_make_state
+               crng_fast_key_erasure
+               chacha_permute
+
+    50.00%     0.00%  perf_target  [kernel.kallsyms]  [.] elf_load
+            |
+            ---elf_load
+               asm_exc_page_fault
+               exc_page_fault
+               do_user_addr_fault
+               handle_mm_fault
+               __handle_mm_fault
+               handle_pte_fault
+               do_fault
+               __vmf_anon_prepare
+               __anon_vma_prepare
+               find_mergeable_anon_vma
+
+    50.00%     0.00%  perf_target  [kernel.kallsyms]  [.] asm_exc_page_fault
+            |
+            ---asm_exc_page_fault
+               exc_page_fault
+               do_user_addr_fault
+               handle_mm_fault
+               __handle_mm_fault
+               handle_pte_fault
+               do_fault
+               __vmf_anon_prepare
+               __anon_vma_prepare
+               find_mergeable_anon_vma
+
+    50.00%     0.00%  perf_target  [kernel.kallsyms]  [.] exc_page_fault
+            |
+            ---exc_page_fault
+               do_user_addr_fault
+               handle_mm_fault
+               __handle_mm_fault
+               handle_pte_fault
+               do_fault
+               __vmf_anon_prepare
+               __anon_vma_prepare
+               find_mergeable_anon_vma
+
+    50.00%     0.00%  perf_target  [kernel.kallsyms]  [.] do_user_addr_fault
+            |
+            ---do_user_addr_fault
+               handle_mm_fault
+               __handle_mm_fault
+               handle_pte_fault
+               do_fault
+               __vmf_anon_prepare
+               __anon_vma_prepare
+               find_mergeable_anon_vma
+
+    50.00%     0.00%  perf_target  [kernel.kallsyms]  [.] handle_mm_fault
+            |
+            ---handle_mm_fault
+               __handle_mm_fault
+               handle_pte_fault
+               do_fault
+               __vmf_anon_prepare
+               __anon_vma_prepare
+               find_mergeable_anon_vma
+
+    50.00%     0.00%  perf_target  [kernel.kallsyms]  [.] __handle_mm_fault
+            |
+            ---__handle_mm_fault
+               handle_pte_fault
+               do_fault
+               __vmf_anon_prepare
+               __anon_vma_prepare
+               find_mergeable_anon_vma
+
+    50.00%     0.00%  perf_target  [kernel.kallsyms]  [.] create_elf_tables
+            |
+            ---create_elf_tables
+               get_random_bytes
+               _get_random_bytes
+               crng_make_state
+               crng_fast_key_erasure
+               chacha_permute
+
+    50.00%     0.00%  perf_target  [kernel.kallsyms]  [.] get_random_bytes
+            |
+            ---get_random_bytes
+               _get_random_bytes
+               crng_make_state
+               crng_fast_key_erasure
+               chacha_permute
+
+    50.00%     0.00%  perf_target  [kernel.kallsyms]  [.] handle_pte_fault
+            |
+            ---handle_pte_fault
+               do_fault
+               __vmf_anon_prepare
+               __anon_vma_prepare
+               find_mergeable_anon_vma
+
+    50.00%     0.00%  perf_target  [kernel.kallsyms]  [.] _get_random_bytes
+            |
+            ---_get_random_bytes
+               crng_make_state
+               crng_fast_key_erasure
+               chacha_permute
+
+    50.00%     0.00%  perf_target  [kernel.kallsyms]  [.] do_fault
+            |
+            ---do_fault
+               __vmf_anon_prepare
+               __anon_vma_prepare
+               find_mergeable_anon_vma
+
+    50.00%     0.00%  perf_target  [kernel.kallsyms]  [.] __vmf_anon_prepare
+            |
+            ---__vmf_anon_prepare
+               __anon_vma_prepare
+               find_mergeable_anon_vma
+
+    50.00%     0.00%  perf_target  [kernel.kallsyms]  [.] crng_make_state
+            |
+            ---crng_make_state
+               crng_fast_key_erasure
+               chacha_permute
+
+    50.00%     0.00%  perf_target  [kernel.kallsyms]  [.] __anon_vma_prepare
+            |
+            ---__anon_vma_prepare
+               find_mergeable_anon_vma
+
+    50.00%     0.00%  perf_target  [kernel.kallsyms]  [.] crng_fast_key_erasure
+            |
+            ---crng_fast_key_erasure
+               chacha_permute
+
+
+
+# Samples: 92  of event 'cpu_core/cycles/P'
+# Event count (approx.): 79136065
+#
+# Children      Self  Command      Shared Object         Symbol                                
+# ........  ........  ...........  ....................  ......................................
+#
+    78.03%    76.84%  perf_target  libm.so.6             [.] __ieee754_log_fma
+            |          
+            |--1.19%--0x40ea9e6000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40f689e000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40f48b3000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40db54c000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40d2dcc000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40f803a000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40eed3a000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40f1932000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40e1c4e000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40cab00000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40f1a92000000000
+            |          __ieee754_log_fma
+            |          top16 (inlined)
+            |          
+            |--1.19%--0x40e830c000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40e50bc000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40f4adc000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40f3998000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40d004c000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40ec118000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40e9354000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40f6c56000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40f5624000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40dbd4c000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40d8e7c000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--__ieee754_log_fma
+            |          
+            |--1.19%--0x40edb34000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x4099e00000000000
+            |          __ieee754_log_fma
+            |          top16 (inlined)
+            |          
+            |--1.19%--0x40f7791000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40e24ba000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40e0c54000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40deca0000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40f1c1f000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40f0cd4000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40b0bc0000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40e6dda000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40e4162000000000
+            |          __ieee754_log_fma
+            |          top16 (inlined)
+            |          
+            |--1.19%--0x40f4165000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40f2cdf000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40d1aac000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40d0f2c000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40eace6000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.19%--0x40f6320000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.18%--0x40f5bb5000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.18%--0x40da224000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.18%--0x40eeb4c000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.18%--0x40d8170000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.18%--0x40ee4e6000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.18%--0x40f835d000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.18%--0x40e190c000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.18%--0x40e12c2000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.17%--0x40f1dbd000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.17%--0x40c3b08000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.17%--0x40e6f8c000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.16%--0x40e72b6000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.16%--0x40d5004000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.16%--0x40f4f21000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.16%--0x40d72bc000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.15%--0x40f7961000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.15%--0x40ee620000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.14%--0x4082280000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.13%--0x40e3c98000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.13%--0x40f3ad4000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.12%--0x40d493c000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.08%--0x40b7660000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.06%--0x40e7df4000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.00%--0x40e20fc000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.97%--0x40f4b8a000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.94%--0x40e0298000000000
+            |          __ieee754_log_fma
+            |          
+             --0.90%--0x40f4489000000000
+                       __ieee754_log_fma
+
+     8.18%     8.18%  perf_target  perf_target           [.] heavy_compute
+            |          
+            |--1.19%--0x40bd6a0000000000
+            |          heavy_compute
+            |          
+            |--1.19%--0x40d4208000000000
+            |          heavy_compute
+            |          
+            |--1.19%--0x40ea184000000000
+            |          heavy_compute
+            |          
+            |--1.17%--0x40c3a48000000000
+            |          heavy_compute
+            |          
+            |--1.09%--0x40ee94a000000000
+            |          log@plt
+            |          
+            |--0.86%--0x40e0d3c000000000
+            |          heavy_compute
+            |          
+            |--0.81%--0x40f589d000000000
+            |          log@plt
+            |          
+             --0.67%--0x40b7030000000000
+                       heavy_compute
+
+     6.50%     1.19%  perf_target  libm.so.6             [.] __log_finite@GLIBC_2.15@plt
+            |          
+            |--5.31%--__log_finite@GLIBC_2.15@plt
+            |          
+             --1.19%--0x40efadc000000000
+                       __ieee754_log_fma
+
+     6.48%     6.48%  perf_target  libm.so.6             [.] log@@GLIBC_2.29
+            |          
+            |--1.19%--0x40c3cd8000000000
+            |          __log_finite@GLIBC_2.15@plt
+            |          
+            |--1.18%--0x40f82a1000000000
+            |          __log_finite@GLIBC_2.15@plt
+            |          
+            |--1.17%--0x40f172a000000000
+            |          __log (inlined)
+            |          
+            |--1.16%--0x40ed078000000000
+            |          __log_finite@GLIBC_2.15@plt
+            |          
+            |--1.04%--0x40f69f1000000000
+            |          __log_finite@GLIBC_2.15@plt
+            |          
+             --0.74%--0x40e598e000000000
+                       __log_finite@GLIBC_2.15@plt
+
+     3.57%     0.00%  perf_target  libm.so.6             [.] top16 (inlined)
+            |
+            ---top16 (inlined)
+
+     3.07%     1.16%  perf_target  perf_target           [.] log@plt
+            |          
+            |--1.91%--log@plt
+            |          
+             --1.16%--0x40f494e000000000
+                       __log (inlined)
+
+     2.81%     0.00%  perf_target  [kernel.kallsyms]     [.] entry_SYSCALL_64_after_hwframe
+            |
+            ---entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               |          
+                --2.39%--__x64_sys_write
+                          ksys_write
+                          vfs_write
+                          |          
+                          |--1.19%--__fsnotify_parent
+                          |          fsnotify
+                          |          send_to_group
+                          |          fsnotify_handle_inode_event.isra.0
+                          |          inotify_handle_inode_event
+                          |          __kmalloc_noprof
+                          |          __memcg_slab_post_alloc_hook
+                          |          obj_cgroup_charge_account
+                          |          obj_cgroup_charge_pages
+                          |          mod_memcg_state
+                          |          
+                           --1.19%--tty_write
+                                     file_tty_write.isra.0
+
+     2.81%     0.00%  perf_target  [kernel.kallsyms]     [.] do_syscall_64
+            |
+            ---do_syscall_64
+               x64_sys_call
+               |          
+                --2.39%--__x64_sys_write
+                          ksys_write
+                          vfs_write
+                          |          
+                          |--1.19%--__fsnotify_parent
+                          |          fsnotify
+                          |          send_to_group
+                          |          fsnotify_handle_inode_event.isra.0
+                          |          inotify_handle_inode_event
+                          |          __kmalloc_noprof
+                          |          __memcg_slab_post_alloc_hook
+                          |          obj_cgroup_charge_account
+                          |          obj_cgroup_charge_pages
+                          |          mod_memcg_state
+                          |          
+                           --1.19%--tty_write
+                                     file_tty_write.isra.0
+
+     2.81%     0.00%  perf_target  [kernel.kallsyms]     [.] x64_sys_call
+            |
+            ---x64_sys_call
+               |          
+                --2.39%--__x64_sys_write
+                          ksys_write
+                          vfs_write
+                          |          
+                          |--1.19%--__fsnotify_parent
+                          |          fsnotify
+                          |          send_to_group
+                          |          fsnotify_handle_inode_event.isra.0
+                          |          inotify_handle_inode_event
+                          |          __kmalloc_noprof
+                          |          __memcg_slab_post_alloc_hook
+                          |          obj_cgroup_charge_account
+                          |          obj_cgroup_charge_pages
+                          |          mod_memcg_state
+                          |          
+                           --1.19%--tty_write
+                                     file_tty_write.isra.0
+
+     2.80%     0.61%  perf_target  perf_target           [.] main
+            |          
+            |--2.19%--main
+            |          |          
+            |          |--1.19%--_IO_puts
+            |          |          _IO_new_file_overflow (inlined)
+            |          |          _IO_new_do_write (inlined)
+            |          |          new_do_write (inlined)
+            |          |          __libc_write (inlined)
+            |          |          entry_SYSCALL_64_after_hwframe
+            |          |          do_syscall_64
+            |          |          x64_sys_call
+            |          |          __x64_sys_write
+            |          |          ksys_write
+            |          |          vfs_write
+            |          |          tty_write
+            |          |          file_tty_write.isra.0
+            |          |          
+            |           --1.00%--asm_exc_page_fault
+            |                     exc_page_fault
+            |                     do_user_addr_fault
+            |                     |          
+            |                      --0.53%--lock_vma_under_rcu
+            |                                mas_walk
+            |          
+             --0.61%--0x300000002
+                       main
+
+     2.39%     0.00%  perf_target  [unknown]             [k] 0x00005e921d70e890
+            |
+            ---0x5e921d70e890
+               io_intensive
+               ___fprintf_chk (inlined)
+               __vfprintf_internal
+               |          
+                --1.19%--__printf_buffer
+                          __printf_buffer_write
+                          __printf_buffer_flush
+                          __printf_buffer_has_failed (inlined)
+                          __printf_buffer_flush_to_file
+                          _IO_new_file_overflow (inlined)
+                          _IO_new_do_write (inlined)
+                          new_do_write (inlined)
+                          __libc_write (inlined)
+                          entry_SYSCALL_64_after_hwframe
+                          do_syscall_64
+                          x64_sys_call
+                          __x64_sys_write
+                          ksys_write
+                          vfs_write
+                          __fsnotify_parent
+                          fsnotify
+                          send_to_group
+                          fsnotify_handle_inode_event.isra.0
+                          inotify_handle_inode_event
+                          __kmalloc_noprof
+                          __memcg_slab_post_alloc_hook
+                          obj_cgroup_charge_account
+                          obj_cgroup_charge_pages
+                          mod_memcg_state
+
+     2.39%     0.00%  perf_target  perf_target           [.] io_intensive
+            |
+            ---io_intensive
+               ___fprintf_chk (inlined)
+               __vfprintf_internal
+               |          
+                --1.19%--__printf_buffer
+                          __printf_buffer_write
+                          __printf_buffer_flush
+                          __printf_buffer_has_failed (inlined)
+                          __printf_buffer_flush_to_file
+                          _IO_new_file_overflow (inlined)
+                          _IO_new_do_write (inlined)
+                          new_do_write (inlined)
+                          __libc_write (inlined)
+                          entry_SYSCALL_64_after_hwframe
+                          do_syscall_64
+                          x64_sys_call
+                          __x64_sys_write
+                          ksys_write
+                          vfs_write
+                          __fsnotify_parent
+                          fsnotify
+                          send_to_group
+                          fsnotify_handle_inode_event.isra.0
+                          inotify_handle_inode_event
+                          __kmalloc_noprof
+                          __memcg_slab_post_alloc_hook
+                          obj_cgroup_charge_account
+                          obj_cgroup_charge_pages
+                          mod_memcg_state
+
+     2.39%     0.00%  perf_target  libc.so.6             [.] ___fprintf_chk (inlined)
+            |
+            ---___fprintf_chk (inlined)
+               __vfprintf_internal
+               |          
+                --1.19%--__printf_buffer
+                          __printf_buffer_write
+                          __printf_buffer_flush
+                          __printf_buffer_has_failed (inlined)
+                          __printf_buffer_flush_to_file
+                          _IO_new_file_overflow (inlined)
+                          _IO_new_do_write (inlined)
+                          new_do_write (inlined)
+                          __libc_write (inlined)
+                          entry_SYSCALL_64_after_hwframe
+                          do_syscall_64
+                          x64_sys_call
+                          __x64_sys_write
+                          ksys_write
+                          vfs_write
+                          __fsnotify_parent
+                          fsnotify
+                          send_to_group
+                          fsnotify_handle_inode_event.isra.0
+                          inotify_handle_inode_event
+                          __kmalloc_noprof
+                          __memcg_slab_post_alloc_hook
+                          obj_cgroup_charge_account
+                          obj_cgroup_charge_pages
+                          mod_memcg_state
+
+     2.39%     1.19%  perf_target  libc.so.6             [.] __vfprintf_internal
+            |          
+            |--1.19%--__vfprintf_internal
+            |          __printf_buffer
+            |          __printf_buffer_write
+            |          __printf_buffer_flush
+            |          __printf_buffer_has_failed (inlined)
+            |          __printf_buffer_flush_to_file
+            |          _IO_new_file_overflow (inlined)
+            |          _IO_new_do_write (inlined)
+            |          new_do_write (inlined)
+            |          __libc_write (inlined)
+            |          entry_SYSCALL_64_after_hwframe
+            |          do_syscall_64
+            |          x64_sys_call
+            |          __x64_sys_write
+            |          ksys_write
+            |          vfs_write
+            |          __fsnotify_parent
+            |          fsnotify
+            |          send_to_group
+            |          fsnotify_handle_inode_event.isra.0
+            |          inotify_handle_inode_event
+            |          __kmalloc_noprof
+            |          __memcg_slab_post_alloc_hook
+            |          obj_cgroup_charge_account
+            |          obj_cgroup_charge_pages
+            |          mod_memcg_state
+            |          
+             --1.19%--0x5e921d70e890
+                       io_intensive
+                       ___fprintf_chk (inlined)
+                       __vfprintf_internal
+
+     2.39%     0.00%  perf_target  libc.so.6             [.] _IO_new_file_overflow (inlined)
+            |
+            ---_IO_new_file_overflow (inlined)
+               _IO_new_do_write (inlined)
+               new_do_write (inlined)
+               __libc_write (inlined)
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_write
+               ksys_write
+               vfs_write
+               |          
+               |--1.19%--__fsnotify_parent
+               |          fsnotify
+               |          send_to_group
+               |          fsnotify_handle_inode_event.isra.0
+               |          inotify_handle_inode_event
+               |          __kmalloc_noprof
+               |          __memcg_slab_post_alloc_hook
+               |          obj_cgroup_charge_account
+               |          obj_cgroup_charge_pages
+               |          mod_memcg_state
+               |          
+                --1.19%--tty_write
+                          file_tty_write.isra.0
+
+     2.39%     0.00%  perf_target  libc.so.6             [.] _IO_new_do_write (inlined)
+            |
+            ---_IO_new_do_write (inlined)
+               new_do_write (inlined)
+               __libc_write (inlined)
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_write
+               ksys_write
+               vfs_write
+               |          
+               |--1.19%--__fsnotify_parent
+               |          fsnotify
+               |          send_to_group
+               |          fsnotify_handle_inode_event.isra.0
+               |          inotify_handle_inode_event
+               |          __kmalloc_noprof
+               |          __memcg_slab_post_alloc_hook
+               |          obj_cgroup_charge_account
+               |          obj_cgroup_charge_pages
+               |          mod_memcg_state
+               |          
+                --1.19%--tty_write
+                          file_tty_write.isra.0
+
+     2.39%     0.00%  perf_target  libc.so.6             [.] new_do_write (inlined)
+            |
+            ---new_do_write (inlined)
+               __libc_write (inlined)
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_write
+               ksys_write
+               vfs_write
+               |          
+               |--1.19%--__fsnotify_parent
+               |          fsnotify
+               |          send_to_group
+               |          fsnotify_handle_inode_event.isra.0
+               |          inotify_handle_inode_event
+               |          __kmalloc_noprof
+               |          __memcg_slab_post_alloc_hook
+               |          obj_cgroup_charge_account
+               |          obj_cgroup_charge_pages
+               |          mod_memcg_state
+               |          
+                --1.19%--tty_write
+                          file_tty_write.isra.0
+
+     2.39%     0.00%  perf_target  libc.so.6             [.] __libc_write (inlined)
+            |
+            ---__libc_write (inlined)
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_write
+               ksys_write
+               vfs_write
+               |          
+               |--1.19%--__fsnotify_parent
+               |          fsnotify
+               |          send_to_group
+               |          fsnotify_handle_inode_event.isra.0
+               |          inotify_handle_inode_event
+               |          __kmalloc_noprof
+               |          __memcg_slab_post_alloc_hook
+               |          obj_cgroup_charge_account
+               |          obj_cgroup_charge_pages
+               |          mod_memcg_state
+               |          
+                --1.19%--tty_write
+                          file_tty_write.isra.0
+
+     2.39%     0.00%  perf_target  [kernel.kallsyms]     [.] __x64_sys_write
+            |
+            ---__x64_sys_write
+               ksys_write
+               vfs_write
+               |          
+               |--1.19%--__fsnotify_parent
+               |          fsnotify
+               |          send_to_group
+               |          fsnotify_handle_inode_event.isra.0
+               |          inotify_handle_inode_event
+               |          __kmalloc_noprof
+               |          __memcg_slab_post_alloc_hook
+               |          obj_cgroup_charge_account
+               |          obj_cgroup_charge_pages
+               |          mod_memcg_state
+               |          
+                --1.19%--tty_write
+                          file_tty_write.isra.0
+
+     2.39%     0.00%  perf_target  [kernel.kallsyms]     [.] ksys_write
+            |
+            ---ksys_write
+               vfs_write
+               |          
+               |--1.19%--__fsnotify_parent
+               |          fsnotify
+               |          send_to_group
+               |          fsnotify_handle_inode_event.isra.0
+               |          inotify_handle_inode_event
+               |          __kmalloc_noprof
+               |          __memcg_slab_post_alloc_hook
+               |          obj_cgroup_charge_account
+               |          obj_cgroup_charge_pages
+               |          mod_memcg_state
+               |          
+                --1.19%--tty_write
+                          file_tty_write.isra.0
+
+     2.39%     0.00%  perf_target  [kernel.kallsyms]     [.] vfs_write
+            |
+            ---vfs_write
+               |          
+               |--1.19%--__fsnotify_parent
+               |          fsnotify
+               |          send_to_group
+               |          fsnotify_handle_inode_event.isra.0
+               |          inotify_handle_inode_event
+               |          __kmalloc_noprof
+               |          __memcg_slab_post_alloc_hook
+               |          obj_cgroup_charge_account
+               |          obj_cgroup_charge_pages
+               |          mod_memcg_state
+               |          
+                --1.19%--tty_write
+                          file_tty_write.isra.0
+
+     2.33%     0.00%  perf_target  libm.so.6             [.] __log (inlined)
+            |
+            ---__log (inlined)
+
+     1.61%     0.00%  perf_target  [unknown]             [k] 0x0000000300000002
+            |
+            ---0x300000002
+               main
+               |          
+                --1.00%--asm_exc_page_fault
+                          exc_page_fault
+                          do_user_addr_fault
+                          |          
+                           --0.53%--lock_vma_under_rcu
+                                     mas_walk
+
+     1.38%     0.00%  perf_target  [kernel.kallsyms]     [.] asm_exc_page_fault
+            |
+            ---asm_exc_page_fault
+               exc_page_fault
+               do_user_addr_fault
+               |          
+               |--0.85%--handle_mm_fault
+               |          __handle_mm_fault
+               |          handle_pte_fault
+               |          do_anonymous_page
+               |          
+                --0.53%--lock_vma_under_rcu
+                          mas_walk
+
+     1.38%     0.00%  perf_target  [kernel.kallsyms]     [.] exc_page_fault
+            |
+            ---exc_page_fault
+               do_user_addr_fault
+               |          
+               |--0.85%--handle_mm_fault
+               |          __handle_mm_fault
+               |          handle_pte_fault
+               |          do_anonymous_page
+               |          
+                --0.53%--lock_vma_under_rcu
+                          mas_walk
+
+     1.38%     0.00%  perf_target  [kernel.kallsyms]     [.] do_user_addr_fault
+            |
+            ---do_user_addr_fault
+               |          
+               |--0.85%--handle_mm_fault
+               |          __handle_mm_fault
+               |          handle_pte_fault
+               |          do_anonymous_page
+               |          
+                --0.53%--lock_vma_under_rcu
+                          mas_walk
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40ea9e6000000000
+            |
+            ---0x40ea9e6000000000
+               __ieee754_log_fma
+
+     1.19%     1.19%  perf_target  [kernel.kallsyms]     [k] __css_rstat_updated
+            |
+            ---0x5e921d70e890
+               io_intensive
+               ___fprintf_chk (inlined)
+               __vfprintf_internal
+               __printf_buffer
+               __printf_buffer_write
+               __printf_buffer_flush
+               __printf_buffer_has_failed (inlined)
+               __printf_buffer_flush_to_file
+               _IO_new_file_overflow (inlined)
+               _IO_new_do_write (inlined)
+               new_do_write (inlined)
+               __libc_write (inlined)
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_write
+               ksys_write
+               vfs_write
+               __fsnotify_parent
+               fsnotify
+               send_to_group
+               fsnotify_handle_inode_event.isra.0
+               inotify_handle_inode_event
+               __kmalloc_noprof
+               __memcg_slab_post_alloc_hook
+               obj_cgroup_charge_account
+               obj_cgroup_charge_pages
+               mod_memcg_state
+
+     1.19%     0.00%  perf_target  libc.so.6             [.] __printf_buffer
+            |
+            ---__printf_buffer
+               __printf_buffer_write
+               __printf_buffer_flush
+               __printf_buffer_has_failed (inlined)
+               __printf_buffer_flush_to_file
+               _IO_new_file_overflow (inlined)
+               _IO_new_do_write (inlined)
+               new_do_write (inlined)
+               __libc_write (inlined)
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_write
+               ksys_write
+               vfs_write
+               __fsnotify_parent
+               fsnotify
+               send_to_group
+               fsnotify_handle_inode_event.isra.0
+               inotify_handle_inode_event
+               __kmalloc_noprof
+               __memcg_slab_post_alloc_hook
+               obj_cgroup_charge_account
+               obj_cgroup_charge_pages
+               mod_memcg_state
+
+     1.19%     0.00%  perf_target  libc.so.6             [.] __printf_buffer_write
+            |
+            ---__printf_buffer_write
+               __printf_buffer_flush
+               __printf_buffer_has_failed (inlined)
+               __printf_buffer_flush_to_file
+               _IO_new_file_overflow (inlined)
+               _IO_new_do_write (inlined)
+               new_do_write (inlined)
+               __libc_write (inlined)
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_write
+               ksys_write
+               vfs_write
+               __fsnotify_parent
+               fsnotify
+               send_to_group
+               fsnotify_handle_inode_event.isra.0
+               inotify_handle_inode_event
+               __kmalloc_noprof
+               __memcg_slab_post_alloc_hook
+               obj_cgroup_charge_account
+               obj_cgroup_charge_pages
+               mod_memcg_state
+
+     1.19%     0.00%  perf_target  libc.so.6             [.] __printf_buffer_flush
+            |
+            ---__printf_buffer_flush
+               __printf_buffer_has_failed (inlined)
+               __printf_buffer_flush_to_file
+               _IO_new_file_overflow (inlined)
+               _IO_new_do_write (inlined)
+               new_do_write (inlined)
+               __libc_write (inlined)
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_write
+               ksys_write
+               vfs_write
+               __fsnotify_parent
+               fsnotify
+               send_to_group
+               fsnotify_handle_inode_event.isra.0
+               inotify_handle_inode_event
+               __kmalloc_noprof
+               __memcg_slab_post_alloc_hook
+               obj_cgroup_charge_account
+               obj_cgroup_charge_pages
+               mod_memcg_state
+
+     1.19%     0.00%  perf_target  libc.so.6             [.] __printf_buffer_has_failed (inlined)
+            |
+            ---__printf_buffer_has_failed (inlined)
+               __printf_buffer_flush_to_file
+               _IO_new_file_overflow (inlined)
+               _IO_new_do_write (inlined)
+               new_do_write (inlined)
+               __libc_write (inlined)
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_write
+               ksys_write
+               vfs_write
+               __fsnotify_parent
+               fsnotify
+               send_to_group
+               fsnotify_handle_inode_event.isra.0
+               inotify_handle_inode_event
+               __kmalloc_noprof
+               __memcg_slab_post_alloc_hook
+               obj_cgroup_charge_account
+               obj_cgroup_charge_pages
+               mod_memcg_state
+
+     1.19%     0.00%  perf_target  libc.so.6             [.] __printf_buffer_flush_to_file
+            |
+            ---__printf_buffer_flush_to_file
+               _IO_new_file_overflow (inlined)
+               _IO_new_do_write (inlined)
+               new_do_write (inlined)
+               __libc_write (inlined)
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_write
+               ksys_write
+               vfs_write
+               __fsnotify_parent
+               fsnotify
+               send_to_group
+               fsnotify_handle_inode_event.isra.0
+               inotify_handle_inode_event
+               __kmalloc_noprof
+               __memcg_slab_post_alloc_hook
+               obj_cgroup_charge_account
+               obj_cgroup_charge_pages
+               mod_memcg_state
+
+     1.19%     0.00%  perf_target  [kernel.kallsyms]     [.] __fsnotify_parent
+            |
+            ---__fsnotify_parent
+               fsnotify
+               send_to_group
+               fsnotify_handle_inode_event.isra.0
+               inotify_handle_inode_event
+               __kmalloc_noprof
+               __memcg_slab_post_alloc_hook
+               obj_cgroup_charge_account
+               obj_cgroup_charge_pages
+               mod_memcg_state
+
+     1.19%     0.00%  perf_target  [kernel.kallsyms]     [.] fsnotify
+            |
+            ---fsnotify
+               send_to_group
+               fsnotify_handle_inode_event.isra.0
+               inotify_handle_inode_event
+               __kmalloc_noprof
+               __memcg_slab_post_alloc_hook
+               obj_cgroup_charge_account
+               obj_cgroup_charge_pages
+               mod_memcg_state
+
+     1.19%     0.00%  perf_target  [kernel.kallsyms]     [.] send_to_group
+            |
+            ---send_to_group
+               fsnotify_handle_inode_event.isra.0
+               inotify_handle_inode_event
+               __kmalloc_noprof
+               __memcg_slab_post_alloc_hook
+               obj_cgroup_charge_account
+               obj_cgroup_charge_pages
+               mod_memcg_state
+
+     1.19%     0.00%  perf_target  [kernel.kallsyms]     [.] fsnotify_handle_inode_event.isra.0
+            |
+            ---fsnotify_handle_inode_event.isra.0
+               inotify_handle_inode_event
+               __kmalloc_noprof
+               __memcg_slab_post_alloc_hook
+               obj_cgroup_charge_account
+               obj_cgroup_charge_pages
+               mod_memcg_state
+
+     1.19%     0.00%  perf_target  [kernel.kallsyms]     [.] inotify_handle_inode_event
+            |
+            ---inotify_handle_inode_event
+               __kmalloc_noprof
+               __memcg_slab_post_alloc_hook
+               obj_cgroup_charge_account
+               obj_cgroup_charge_pages
+               mod_memcg_state
+
+     1.19%     0.00%  perf_target  [kernel.kallsyms]     [.] __kmalloc_noprof
+            |
+            ---__kmalloc_noprof
+               __memcg_slab_post_alloc_hook
+               obj_cgroup_charge_account
+               obj_cgroup_charge_pages
+               mod_memcg_state
+
+     1.19%     0.00%  perf_target  [kernel.kallsyms]     [.] __memcg_slab_post_alloc_hook
+            |
+            ---__memcg_slab_post_alloc_hook
+               obj_cgroup_charge_account
+               obj_cgroup_charge_pages
+               mod_memcg_state
+
+     1.19%     0.00%  perf_target  [kernel.kallsyms]     [.] obj_cgroup_charge_account
+            |
+            ---obj_cgroup_charge_account
+               obj_cgroup_charge_pages
+               mod_memcg_state
+
+     1.19%     0.00%  perf_target  [kernel.kallsyms]     [.] obj_cgroup_charge_pages
+            |
+            ---obj_cgroup_charge_pages
+               mod_memcg_state
+
+     1.19%     0.00%  perf_target  [kernel.kallsyms]     [.] mod_memcg_state
+            |
+            ---mod_memcg_state
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40f689e000000000
+            |
+            ---0x40f689e000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40f48b3000000000
+            |
+            ---0x40f48b3000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40db54c000000000
+            |
+            ---0x40db54c000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40d2dcc000000000
+            |
+            ---0x40d2dcc000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40f803a000000000
+            |
+            ---0x40f803a000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40eed3a000000000
+            |
+            ---0x40eed3a000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40f1932000000000
+            |
+            ---0x40f1932000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40e1c4e000000000
+            |
+            ---0x40e1c4e000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40cab00000000000
+            |
+            ---0x40cab00000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40f1a92000000000
+            |
+            ---0x40f1a92000000000
+               __ieee754_log_fma
+               top16 (inlined)
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40e830c000000000
+            |
+            ---0x40e830c000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40e50bc000000000
+            |
+            ---0x40e50bc000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40bd6a0000000000
+            |
+            ---0x40bd6a0000000000
+               heavy_compute
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40f4adc000000000
+            |
+            ---0x40f4adc000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40f3998000000000
+            |
+            ---0x40f3998000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40d4208000000000
+            |
+            ---0x40d4208000000000
+               heavy_compute
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40d004c000000000
+            |
+            ---0x40d004c000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40ec118000000000
+            |
+            ---0x40ec118000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40e9354000000000
+            |
+            ---0x40e9354000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40f6c56000000000
+            |
+            ---0x40f6c56000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40f5624000000000
+            |
+            ---0x40f5624000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40dbd4c000000000
+            |
+            ---0x40dbd4c000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40d8e7c000000000
+            |
+            ---0x40d8e7c000000000
+               __ieee754_log_fma
+
+     1.19%     1.19%  perf_target  [kernel.kallsyms]     [k] file_tty_write.isra.0
+            |
+            ---main
+               _IO_puts
+               _IO_new_file_overflow (inlined)
+               _IO_new_do_write (inlined)
+               new_do_write (inlined)
+               __libc_write (inlined)
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_write
+               ksys_write
+               vfs_write
+               tty_write
+               file_tty_write.isra.0
+
+     1.19%     0.00%  perf_target  libc.so.6             [.] _IO_puts
+            |
+            ---_IO_puts
+               _IO_new_file_overflow (inlined)
+               _IO_new_do_write (inlined)
+               new_do_write (inlined)
+               __libc_write (inlined)
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_write
+               ksys_write
+               vfs_write
+               tty_write
+               file_tty_write.isra.0
+
+     1.19%     0.00%  perf_target  [kernel.kallsyms]     [.] tty_write
+            |
+            ---tty_write
+               file_tty_write.isra.0
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40efadc000000000
+            |
+            ---0x40efadc000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40edb34000000000
+            |
+            ---0x40edb34000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x4099e00000000000
+            |
+            ---0x4099e00000000000
+               __ieee754_log_fma
+               top16 (inlined)
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40f7791000000000
+            |
+            ---0x40f7791000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40e24ba000000000
+            |
+            ---0x40e24ba000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40e0c54000000000
+            |
+            ---0x40e0c54000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40deca0000000000
+            |
+            ---0x40deca0000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40f1c1f000000000
+            |
+            ---0x40f1c1f000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40f0cd4000000000
+            |
+            ---0x40f0cd4000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40c3cd8000000000
+            |
+            ---0x40c3cd8000000000
+               __log_finite@GLIBC_2.15@plt
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40b0bc0000000000
+            |
+            ---0x40b0bc0000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40e6dda000000000
+            |
+            ---0x40e6dda000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40e4162000000000
+            |
+            ---0x40e4162000000000
+               __ieee754_log_fma
+               top16 (inlined)
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40f4165000000000
+            |
+            ---0x40f4165000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40f2cdf000000000
+            |
+            ---0x40f2cdf000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40d1aac000000000
+            |
+            ---0x40d1aac000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40d0f2c000000000
+            |
+            ---0x40d0f2c000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40eace6000000000
+            |
+            ---0x40eace6000000000
+               __ieee754_log_fma
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40ea184000000000
+            |
+            ---0x40ea184000000000
+               heavy_compute
+
+     1.19%     0.00%  perf_target  [unknown]             [.] 0x40f6320000000000
+            |
+            ---0x40f6320000000000
+               __ieee754_log_fma
+
+     1.18%     0.00%  perf_target  [unknown]             [.] 0x40f5bb5000000000
+            |
+            ---0x40f5bb5000000000
+               __ieee754_log_fma
+
+     1.18%     0.00%  perf_target  [unknown]             [.] 0x40da224000000000
+            |
+            ---0x40da224000000000
+               __ieee754_log_fma
+
+     1.18%     0.00%  perf_target  [unknown]             [.] 0x40eeb4c000000000
+            |
+            ---0x40eeb4c000000000
+               __ieee754_log_fma
+
+     1.18%     0.00%  perf_target  [unknown]             [.] 0x40d8170000000000
+            |
+            ---0x40d8170000000000
+               __ieee754_log_fma
+
+     1.18%     0.00%  perf_target  [unknown]             [.] 0x40ee4e6000000000
+            |
+            ---0x40ee4e6000000000
+               __ieee754_log_fma
+
+     1.18%     0.00%  perf_target  [unknown]             [.] 0x40f82a1000000000
+            |
+            ---0x40f82a1000000000
+               __log_finite@GLIBC_2.15@plt
+
+     1.18%     0.00%  perf_target  [unknown]             [.] 0x40f835d000000000
+            |
+            ---0x40f835d000000000
+               __ieee754_log_fma
+
+     1.18%     0.00%  perf_target  [unknown]             [.] 0x40e190c000000000
+            |
+            ---0x40e190c000000000
+               __ieee754_log_fma
+
+     1.18%     0.00%  perf_target  [unknown]             [.] 0x40e12c2000000000
+            |
+            ---0x40e12c2000000000
+               __ieee754_log_fma
+
+     1.17%     0.00%  perf_target  [unknown]             [.] 0x40f1dbd000000000
+            |
+            ---0x40f1dbd000000000
+               __ieee754_log_fma
+
+     1.17%     0.00%  perf_target  [unknown]             [.] 0x40c3b08000000000
+            |
+            ---0x40c3b08000000000
+               __ieee754_log_fma
+
+     1.17%     0.00%  perf_target  [unknown]             [.] 0x40f172a000000000
+            |
+            ---0x40f172a000000000
+               __log (inlined)
+
+     1.17%     0.00%  perf_target  [unknown]             [.] 0x40c3a48000000000
+            |
+            ---0x40c3a48000000000
+               heavy_compute
+
+     1.17%     0.00%  perf_target  [unknown]             [.] 0x40e6f8c000000000
+            |
+            ---0x40e6f8c000000000
+               __ieee754_log_fma
+
+     1.16%     0.00%  perf_target  [unknown]             [.] 0x40e72b6000000000
+            |
+            ---0x40e72b6000000000
+               __ieee754_log_fma
+
+     1.16%     0.00%  perf_target  [unknown]             [.] 0x40d5004000000000
+            |
+            ---0x40d5004000000000
+               __ieee754_log_fma
+
+     1.16%     0.00%  perf_target  [unknown]             [.] 0x40f4f21000000000
+            |
+            ---0x40f4f21000000000
+               __ieee754_log_fma
+
+     1.16%     0.00%  perf_target  [unknown]             [.] 0x40f494e000000000
+            |
+            ---0x40f494e000000000
+               __log (inlined)
+
+     1.16%     0.00%  perf_target  [unknown]             [.] 0x40ed078000000000
+            |
+            ---0x40ed078000000000
+               __log_finite@GLIBC_2.15@plt
+
+     1.16%     0.00%  perf_target  [unknown]             [.] 0x40d72bc000000000
+            |
+            ---0x40d72bc000000000
+               __ieee754_log_fma
+
+     1.15%     0.00%  perf_target  [unknown]             [.] 0x40f7961000000000
+            |
+            ---0x40f7961000000000
+               __ieee754_log_fma
+
+     1.15%     0.00%  perf_target  [unknown]             [.] 0x40ee620000000000
+            |
+            ---0x40ee620000000000
+               __ieee754_log_fma
+
+     1.14%     0.00%  perf_target  [unknown]             [.] 0x4082280000000000
+            |
+            ---0x4082280000000000
+               __ieee754_log_fma
+
+     1.13%     0.00%  perf_target  [unknown]             [.] 0x40e3c98000000000
+            |
+            ---0x40e3c98000000000
+               __ieee754_log_fma
+
+     1.13%     0.00%  perf_target  [unknown]             [.] 0x40f3ad4000000000
+            |
+            ---0x40f3ad4000000000
+               __ieee754_log_fma
+
+     1.12%     0.00%  perf_target  [unknown]             [.] 0x40d493c000000000
+            |
+            ---0x40d493c000000000
+               __ieee754_log_fma
+
+     1.09%     0.00%  perf_target  [unknown]             [.] 0x40ee94a000000000
+            |
+            ---0x40ee94a000000000
+               log@plt
+
+     1.08%     0.00%  perf_target  [unknown]             [.] 0x40b7660000000000
+            |
+            ---0x40b7660000000000
+               __ieee754_log_fma
+
+     1.06%     0.00%  perf_target  [unknown]             [.] 0x40e7df4000000000
+            |
+            ---0x40e7df4000000000
+               __ieee754_log_fma
+
+     1.04%     0.00%  perf_target  [unknown]             [.] 0x40f69f1000000000
+            |
+            ---0x40f69f1000000000
+               __log_finite@GLIBC_2.15@plt
+
+     1.00%     0.00%  perf_target  [unknown]             [.] 0x40e20fc000000000
+            |
+            ---0x40e20fc000000000
+               __ieee754_log_fma
+
+     0.97%     0.00%  perf_target  [unknown]             [.] 0x40f4b8a000000000
+            |
+            ---0x40f4b8a000000000
+               __ieee754_log_fma
+
+     0.97%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] _dl_start_user
+            |
+            ---_dl_start_user
+               _dl_start
+               _dl_start_final (inlined)
+               _dl_sysdep_start
+               dl_main
+
+     0.97%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] _dl_start
+            |
+            ---_dl_start
+               _dl_start_final (inlined)
+               _dl_sysdep_start
+               dl_main
+
+     0.97%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] _dl_start_final (inlined)
+            |
+            ---_dl_start_final (inlined)
+               _dl_sysdep_start
+               dl_main
+
+     0.97%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] _dl_sysdep_start
+            |
+            ---_dl_sysdep_start
+               dl_main
+
+     0.97%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] dl_main
+            |
+            ---dl_main
+
+     0.94%     0.00%  perf_target  [unknown]             [.] 0x40e0298000000000
+            |
+            ---0x40e0298000000000
+               __ieee754_log_fma
+
+     0.90%     0.00%  perf_target  [unknown]             [.] 0x40f4489000000000
+            |
+            ---0x40f4489000000000
+               __ieee754_log_fma
+
+     0.86%     0.00%  perf_target  [unknown]             [.] 0x40e0d3c000000000
+            |
+            ---0x40e0d3c000000000
+               heavy_compute
+
+     0.85%     0.00%  perf_target  [kernel.kallsyms]     [.] handle_mm_fault
+            |
+            ---handle_mm_fault
+               __handle_mm_fault
+               handle_pte_fault
+               do_anonymous_page
+
+     0.85%     0.00%  perf_target  [kernel.kallsyms]     [.] __handle_mm_fault
+            |
+            ---__handle_mm_fault
+               handle_pte_fault
+               do_anonymous_page
+
+     0.85%     0.00%  perf_target  [kernel.kallsyms]     [.] handle_pte_fault
+            |
+            ---handle_pte_fault
+               do_anonymous_page
+
+     0.85%     0.00%  perf_target  [kernel.kallsyms]     [.] do_anonymous_page
+            |
+            ---do_anonymous_page
+
+     0.81%     0.00%  perf_target  [unknown]             [.] 0x40f589d000000000
+            |
+            ---0x40f589d000000000
+               log@plt
+
+     0.74%     0.00%  perf_target  [unknown]             [.] 0x40e598e000000000
+            |
+            ---0x40e598e000000000
+               __log_finite@GLIBC_2.15@plt
+
+     0.67%     0.00%  perf_target  [unknown]             [.] 0x40b7030000000000
+            |
+            ---0x40b7030000000000
+               heavy_compute
+
+     0.53%     0.53%  perf_target  [kernel.kallsyms]     [k] mas_walk
+            |
+            ---0x300000002
+               main
+               asm_exc_page_fault
+               exc_page_fault
+               do_user_addr_fault
+               lock_vma_under_rcu
+               mas_walk
+
+     0.53%     0.00%  perf_target  [kernel.kallsyms]     [.] lock_vma_under_rcu
+            |
+            ---lock_vma_under_rcu
+               mas_walk
+
+     0.47%     0.47%  perf_target  [kernel.kallsyms]     [k] count_memcg_events
+     0.47%     0.00%  perf_target  [kernel.kallsyms]     [.] alloc_anon_folio
+     0.47%     0.00%  perf_target  [kernel.kallsyms]     [.] __mem_cgroup_charge
+     0.47%     0.00%  perf_target  [kernel.kallsyms]     [.] charge_memcg
+     0.43%     0.27%  perf_target  [kernel.kallsyms]     [.] ksys_mmap_pgoff
+     0.43%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] rtld_timer_accum (inlined)
+     0.43%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] rtld_timer_stop (inlined)
+     0.43%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] _dl_map_object_deps
+     0.43%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] _dl_catch_exception
+     0.43%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] set_catch (inlined)
+     0.43%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] openaux
+     0.43%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] _dl_map_object
+     0.43%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] __mmap64 (inlined)
+     0.43%     0.00%  perf_target  [kernel.kallsyms]     [.] __x64_sys_mmap
+     0.38%     0.38%  perf_target  [kernel.kallsyms]     [k] lruvec_stat_mod_folio
+     0.38%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] rtld_timer_start (inlined)
+     0.38%     0.00%  perf_target  libc.so.6             [.] __x86_cacheinfo_ifunc
+     0.38%     0.00%  perf_target  libc.so.6             [.] init_cacheinfo (inlined)
+     0.38%     0.00%  perf_target  [kernel.kallsyms]     [.] folio_add_new_anon_rmap
+     0.38%     0.00%  perf_target  [kernel.kallsyms]     [.] __folio_mod_stat
+     0.27%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] _dl_map_object_from_fd
+     0.27%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] _dl_map_segments (inlined)
+     0.16%     0.16%  perf_target  [kernel.kallsyms]     [k] __mmap_new_vma
+     0.16%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] _dl_load_cache_lookup
+     0.16%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] _dl_sysdep_read_whole_file
+     0.16%     0.16%  perf_target  ld-linux-x86-64.so.2  [.] check_match
+     0.16%     0.00%  perf_target  [kernel.kallsyms]     [.] vm_mmap_pgoff
+     0.16%     0.00%  perf_target  [kernel.kallsyms]     [.] do_mmap
+     0.16%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] setup_vdso_pointers (inlined)
+     0.16%     0.00%  perf_target  [kernel.kallsyms]     [.] mmap_region
+     0.16%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] dl_vdso_vsym (inlined)
+     0.16%     0.00%  perf_target  [kernel.kallsyms]     [.] __mmap_region
+     0.16%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] _dl_lookup_symbol_x
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

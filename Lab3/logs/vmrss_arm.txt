@@ -1,0 +1,25 @@
+LAB-03 - ARM Memory Analysis
+Target: QEMU ARMv7, Linux Kernel 5.15
+Process PID: 57
+
+===== BEFORE ALLOCATIONS =====
+VmSize: 1548 kB
+VmRSS:   156 kB
+VmData:  192 kB
+
+===== AFTER ALLOCATIONS =====
+VmSize: 1548 kB
+VmRSS:   156 kB
+VmData:  192 kB
+
+===== MEMORY DIFFERENCE =====
+VmSize: 0 kB
+VmRSS:  0 kB
+VmData: 0 kB
+
+Exit code: 0
+
+Observation:
+VmRSS remained unchanged during this measurement.
+Valgrind separately detected 16,900 bytes of memory leaks
+before fixing the application.
