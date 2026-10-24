@@ -1,0 +1,142 @@
+===== TEST 1: LOAD MODULE =====
+asgn1_driver: loading out-of-tree module taints kernel.
+asgn1: initializing module
+asgn1: module loaded successfully
+asgn1: /dev/asgn1 registered, major=241
+asgn1: /proc/asgn1_info created
+asgn1: sysfs attributes created
+asgn1_driver 16384 0 - Live 0x7f000000 (O)
+[PASS] Module loaded
+
+===== TEST 2: CREATE DEVICE =====
+crw-r--r--    1 root     0         241,   0 Oct 24 17:47 [1;35m/dev/asgn1[m
+[PASS] Device available
+
+===== TEST 3: IOCTL FUNCTIONS =====
+====================================
+ASSIGNMENT 01 - TASK 1 IOCTL TEST
+Student: Nguyen Xuan Phu
+Student ID: SE203361
+====================================
+asgn1: device opened, count=1
+
+===== TEST 1: GET_VERSION =====
+asgn1: GET_VERSION called
+Version: asgn1_driver v1.0 - SE203361
+[PASS] GET_VERSION
+
+===== TEST 2: INITIAL RESET =====
+asgn1: RESET_BUFFER called
+[PASS] RESET_BUFFER
+
+===== TEST 3: KERNEL MODE =====
+asgn1: SET_MODE = 0 (Kernel mode)
+[PASS] SET_MODE = 0
+asgn1: write success, mode=0, length=13
+asgn1: device opened, count=2
+asgn1: read 13 bytes
+asgn1: device closed
+Expected: [[KERNEL]Hello]
+Actual  : [[KERNEL]Hello]
+[PASS] Read result
+[PASS] Kernel mode
+
+===== TEST 4: ECHO MODE =====
+asgn1: SET_MODE = 1 (Echo mode)
+[PASS] SET_MODE = 1
+asgn1: write success, mode=1, length=5
+asgn1: device opened, count=3
+asgn1: read 5 bytes
+asgn1: device closed
+Expected: [World]
+Actual  : [World]
+[PASS] Read result
+[PASS] Echo mode
+
+===== TEST 5: GET_STATS =====
+asgn1: GET_STATS called
+Open count      : 3
+Write count     : 2
+Read count      : 2
+Buffer length   : 5
+Last write size : 5
+asgn1: GET_STATS called
+[PASS] GET_STATS
+
+===== TEST 6: RESET BUFFER =====
+asgn1: RESET_BUFFER called
+asgn1: GET_STATS called
+Open count      : 3
+Write count     : 0
+Read count      : 0
+Buffer length   : 0
+Last write size : 0
+asgn1: GET_STATS called
+asgn1: device opened, count=4
+asgn1: device closed
+Expected: []
+Actual  : []
+[PASS] Read result
+[PASS] RESET_BUFFER
+
+===== TEST 7: INVALID MODE =====
+asgn1: invalid mode=2
+[PASS] Invalid mode rejected
+
+===== TEST 8: INVALID IOCTL =====
+asgn1: unsupported ioctl command
+[PASS] Invalid ioctl rejected
+asgn1: device closed
+
+====================================
+ALL IOCTL TESTS PASSED
+====================================
+[PASS] IOCTL functional tests
+
+===== TEST 4: PROCFS =====
+Assignment 01 Character Device Driver
+=====================================
+Device name : asgn1
+Major       : 241
+Buffer size : 1024
+Buffer len  : 0
+Open count  : 4
+Read count  : 0
+Write count : 0
+Mode        : 1
+Last data   : (empty)
+[PASS] Procfs
+
+===== TEST 5: KERNEL LOG =====
+asgn1: initializing module
+asgn1: module loaded successfully
+asgn1: /dev/asgn1 registered, major=241
+asgn1: /proc/asgn1_info created
+asgn1: sysfs attributes created
+asgn1: device opened, count=1
+asgn1: GET_VERSION called
+asgn1: RESET_BUFFER called
+asgn1: SET_MODE = 0 (Kernel mode)
+asgn1: write success, mode=0, length=13
+asgn1: device opened, count=2
+asgn1: read 13 bytes
+asgn1: device closed
+asgn1: SET_MODE = 1 (Echo mode)
+asgn1: write success, mode=1, length=5
+asgn1: device opened, count=3
+asgn1: read 5 bytes
+asgn1: device closed
+asgn1: GET_STATS called
+asgn1: GET_STATS called
+asgn1: RESET_BUFFER called
+asgn1: GET_STATS called
+asgn1: GET_STATS called
+asgn1: device opened, count=4
+asgn1: device closed
+asgn1: invalid mode=2
+asgn1: unsupported ioctl command
+asgn1: device closed
+
+===== TEST 6: UNLOAD MODULE =====
+asgn1: module unloaded successfully
+[PASS] Module unloaded
