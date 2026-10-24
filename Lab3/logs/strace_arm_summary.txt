@@ -1,0 +1,19 @@
+LAB-03 - ARM/QEMU System Call Analysis
+Tool: strace -c
+Target: ARMv7 Linux 5.15
+
+% time     seconds  usecs/call   calls  errors syscall
+------ ----------- ----------- ------- ------- -------
+ 88.72    0.004884          65      75          write
+  9.99    0.000550         275       2          munmap
+  1.29    0.000071          23       3          close
+------ ----------- ----------- ------- ------- -------
+100.00    0.005505          46     119       7 total
+
+ARM execution time:
+real 0.81 s
+user 0.80 s
+sys  0.00 s
+
+Note: The table above is a condensed record of the
+actual strace output collected on QEMU ARM.

@@ -1,0 +1,164 @@
+The target architecture is set to "arm".
+Remote debugging using 127.0.0.1:1234
+Reading symbols from /home/phu/embedded_lab3/rootfs/initramfs/lib/ld-linux-armhf.so.3...
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Debuginfod has been enabled.
+To make this setting permanent, add 'set debuginfod enabled on' to .gdbinit.
+Downloading separate debug info for system-supplied DSO at 0x76fe0000
+[###                                                                         ][ ###                                                                        ][  ###                                                                       ]                                                                                0x76ff0598 in _start () from /home/phu/embedded_lab3/rootfs/initramfs/lib/ld-linux-armhf.so.3
+Breakpoint 1 at 0x40072e: file buggy_app.c, line 36.
+Continuing.
+Downloading separate debug info for /home/phu/embedded_lab3/rootfs/initramfs/lib/libc.so.6
+[###                                                                         ]                                                                                
+Breakpoint 1, main () at buggy_app.c:36
+36	int main(void) {
+on: Logging is enabled.
+Already logging to /home/phu/embedded_lab3/logs/gdb_session.txt.
+Breakpoint 2 at 0x400682: file buggy_app.c, line 7.
+Continuing.
+
+Breakpoint 2, process_data (data=0x7efffd48, len=5) at buggy_app.c:7
+7	    int sum = 0;
+data = 0x7efffd48
+len = 5
+1	#include <stdio.h>
+2	#include <stdlib.h>
+3	#include <string.h>
+4	
+5	/* Bug 1: Array out-of-bounds */
+6	void process_data(int *data, int len) {
+7	    int sum = 0;
+8	
+9	    for (int i = 0; i <= len; i++) {
+10	        sum += data[i];
+11	    }
+12	
+13	    printf("Sum = %d\n", sum);
+14	}
+15	
+16	/* Bug 2: Use-after-free */
+17	char *create_message(const char *text) {
+18	    char *buf = malloc(strlen(text) + 1);
+19	
+20	    strcpy(buf, text);
+Breakpoint 3 at 0x40068c: file buggy_app.c, line 10.
+Continuing.
+
+Breakpoint 3, process_data (data=0x7efffd48, len=5) at buggy_app.c:10
+10	        sum += data[i];
+Undefined command: "10".  Try "help".
+$1 = 5
+$2 = 5
+$3 = 150
+$4 = {10, 20, 30, 40, 50}
+#0  process_data (data=0x7efffd48, len=5) at buggy_app.c:10
+#1  0x00400770 in main () at buggy_app.c:43
+i = 5
+sum = 150
+r0             0x7efffd48          2130705736
+r1             0x5                 5
+r2             0x5                 5
+r3             0x5                 5
+r4             0x7efffd58          2130705752
+r5             0x40097c            4196732
+r6             0x401eac            4202156
+r7             0x7efffd28          2130705704
+r8             0x400729            4196137
+r9             0x76ffecd8          1996483800
+r10            0x0                 0
+r11            0x401eac            4202156
+r12            0x4                 4
+sp             0x7efffd28          0x7efffd28
+lr             0x400771            4196209
+pc             0x40068c            0x40068c <process_data+20>
+cpsr           0x600f0030          1611595824
+fpscr          0x0                 0
+11	    }
+14	}
+Breakpoint 4 at 0x4006cc: file buggy_app.c, line 18.
+Continuing.
+
+Breakpoint 4, create_message (text=0x400920 "Hello Embedded Linux") at buggy_app.c:18
+18	    char *buf = malloc(strlen(text) + 1);
+16	/* Bug 2: Use-after-free */
+17	char *create_message(const char *text) {
+18	    char *buf = malloc(strlen(text) + 1);
+19	
+20	    strcpy(buf, text);
+21	
+22	    free(buf);
+23	
+24	    return buf;
+25	}
+26	
+27	/* Bug 3: Integer overflow */
+28	int calculate(int a, int b) {
+29	    int result = a * b;
+30	
+31	    printf("calculate(%d, %d) = %d\n", a, b, result);
+32	
+33	    return result;
+34	}
+35	
+36	int main(void) {
+37	    printf("=== Buggy App v1.0 - LAB-03 ===\n");
+38	
+text = 0x400920 "Hello Embedded Linux"
+#0  create_message (text=0x400920 "Hello Embedded Linux") at buggy_app.c:18
+#1  0x00400784 in main () at buggy_app.c:48
+Temporary breakpoint 5 at 0x4006e8: file buggy_app.c, line 22.
+Continuing.
+
+Temporary breakpoint 5, create_message (text=0x400920 "Hello Embedded Linux") at buggy_app.c:22
+22	    free(buf);
+$5 = 0x404198 "Hello Embedded Linux"
+0x404198:	"Hello Embedded Linux"
+24	    return buf;
+$6 = 0x404198 "\004\004"
+buf = 0x404198 "\004\004"
+#0  create_message (text=0x400920 "Hello Embedded Linux") at buggy_app.c:24
+#1  0x00400784 in main () at buggy_app.c:48
+Breakpoint 6 at 0x400702: file buggy_app.c, line 29.
+Continuing.
+
+Breakpoint 6, calculate (a=100000, b=100000) at buggy_app.c:29
+29	    int result = a * b;
+Undefined command: "Breakpoint".  Try "help".
+a = 100000
+b = 100000
+27	/* Bug 3: Integer overflow */
+28	int calculate(int a, int b) {
+29	    int result = a * b;
+30	
+31	    printf("calculate(%d, %d) = %d\n", a, b, result);
+32	
+33	    return result;
+34	}
+31	    printf("calculate(%d, %d) = %d\n", a, b, result);
+$7 = 1410065408
+$8 = 10000000000
+#0  calculate (a=100000, b=100000) at buggy_app.c:31
+#1  0x004007b0 in main () at buggy_app.c:55
+result = 1410065408
+r0             0x186a0             100000
+r1             0x186a0             100000
+r2             0x186a0             100000
+r3             0x540be400          1410065408
+r4             0x7efffd58          2130705752
+r5             0x40097c            4196732
+r6             0x401eac            4202156
+r7             0x7efffd28          2130705704
+r8             0x400729            4196137
+r9             0x76ffecd8          1996483800
+r10            0x0                 0
+r11            0x401eac            4202156
+r12            0x4                 4
+sp             0x7efffd28          0x7efffd28
+lr             0x4007b1            4196273
+pc             0x40070c            0x40070c <calculate+20>
+cpsr           0x200f0030          537854000
+fpscr          0x0                 0
+Continuing.
+[Inferior 1 (process 60) exited normally]
