@@ -1,0 +1,76 @@
+ASSIGNMENT 01 - TASK 2 TEST
+COUNTER DEVICE DRIVER
+======================================
+
+===== TEST 1: LOAD MODULE =====
+counter_driver: loading out-of-tree module taints kernel.
+counter_driver: module loaded successfully
+counter_driver: /dev/counter registered
+counter_driver: /proc/counter_info created
+counter_driver 16384 0 - Live 0x7f000000 (O)
+[PASS] Module loaded
+
+===== TEST 2: CREATE DEVICE =====
+crw-r--r--    1 root     0          10, 125 Oct 24 17:11 [1;35m/dev/counter[m
+[PASS] Device created
+
+===== TEST 3: INITIAL PROCFS =====
+Counter Device Information
+--------------------------
+Current counter: 0
+Total reads: 0
+Total writes: 0
+
+===== TEST 4: AUTO INCREMENT =====
+Expected: 0 | Actual: 0
+[PASS] Read counter
+Expected: 1 | Actual: 1
+[PASS] Read counter
+Expected: 2 | Actual: 2
+[PASS] Read counter
+
+===== TEST 5: SET COUNTER = 100 =====
+--- Procfs after write ---
+Counter Device Information
+--------------------------
+Current counter: 100
+Total reads: 3
+Total writes: 1
+Expected: 100 | Actual: 100
+[PASS] Read counter
+
+===== TEST 6: RESET COUNTER =====
+--- Procfs after reset ---
+Counter Device Information
+--------------------------
+Current counter: 0
+Total reads: 4
+Total writes: 2
+Expected: 0 | Actual: 0
+[PASS] Read counter
+
+===== TEST 7: INVALID INPUT =====
+[PASS] Negative value rejected
+[PASS] Invalid string rejected
+
+===== TEST 8: FINAL STATISTICS =====
+Counter Device Information
+--------------------------
+Current counter: 1
+Total reads: 5
+Total writes: 2
+[PASS] Final statistics
+
+===== TEST 9: UNLOAD MODULE =====
+counter_driver: module unloaded successfully
+[PASS] Module unloaded
+
+===== KERNEL LOG =====
+counter_driver: loading out-of-tree module taints kernel.
+counter_driver: module loaded successfully
+counter_driver: /dev/counter registered
+counter_driver: /proc/counter_info created
+counter_driver: module unloaded successfully
+
+======================================
+ALL COUNTER DRIVER TESTS PASSED
