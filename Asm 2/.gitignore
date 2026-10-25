@@ -1,0 +1,25 @@
+# C/C++ build artifacts
+*.o
+*.a
+
+# Kernel module intermediate files
+*.mod
+*.mod.c
+*.mod.o
+*.cmd
+.*.cmd
+modules.order
+Module.symvers
+
+# Temporary backups
+*.bak
+*~
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+
+rootfs_work/
+tests/test_circular_buffer
+tests/test_sms_ioctl

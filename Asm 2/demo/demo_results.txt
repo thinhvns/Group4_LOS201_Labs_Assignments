@@ -1,0 +1,88 @@
+ASSIGNMENT 02 - SYSTEM DEMONSTRATION RESULTS
+
+Student: Tran Nguyen Hai Dang
+Student ID: SE202009
+
+Project: SMS Sensor Monitoring System
+Platform: ARM vexpress-a9 / QEMU
+Kernel: Linux 5.15
+
+==================================================
+1. SYSTEM BOOT AND DRIVER
+==================================================
+
+- Linux ARM booted successfully in QEMU.
+- SMS sensor kernel driver loaded successfully.
+- Character device /dev/sms_sensor registered.
+- Device major: 248
+- Device minor: 0
+- Driver proc interface: /proc/sms_stats
+
+==================================================
+2. UNIT TESTS
+==================================================
+
+Circular Buffer Unit Tests:
+- Initialization and push/pop: PASS
+- FIFO ordering: PASS
+- Buffer capacity and EAGAIN: PASS
+- Closed-buffer behavior: PASS
+- Empty-buffer cancellation: PASS
+- Cleanup: PASS
+
+Result: ALL CIRCULAR BUFFER TESTS PASSED
+
+SMS IOCTL Tests:
+- Configure sampling interval to 200 ms: PASS
+- Reject interval 0 ms with EINVAL: PASS
+- Reject interval 60001 ms with EINVAL: PASS
+- Restore default interval to 100 ms: PASS
+
+Result: ALL IOCTL TESTS PASSED
+
+==================================================
+3. APPLICATION INTEGRATION TEST
+==================================================
+
+The ARM application ran successfully in QEMU and
+processed sensor readings.
+
+Final smoke-test configuration:
+- Sampling interval: 100 ms
+- Approximate duration: 5 seconds
+- Processed samples: 48
+
+Timing report:
+- Minimum jitter: 3144.000 us
+- Maximum jitter: 6492.000 us
+- Mean jitter: 6277.125 us
+- Standard deviation: 465.490 us
+
+Shutdown:
+- Sensor thread stopped
+- Processor thread stopped
+- Alert thread stopped
+- Logger thread stopped
+- Main shutdown complete
+
+==================================================
+4. BENCHMARK
+==================================================
+
+Sampling interval: 100 ms
+Approximate duration: 120.502 seconds
+Samples processed: 1043
+
+- Minimum jitter: 5347.000 us
+- Maximum jitter: 6567.000 us
+- Mean jitter: 6252.963 us
+- Standard deviation: 70.251 us
+
+==================================================
+5. NOTES
+==================================================
+
+Results were collected in QEMU with Linux kernel 5.15.
+Virtualization and host scheduling affect timing.
+These measurements should not be interpreted as
+physical hardware performance.

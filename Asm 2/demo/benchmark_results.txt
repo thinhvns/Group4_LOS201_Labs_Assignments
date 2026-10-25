@@ -1,0 +1,39 @@
+SMS SENSOR MONITORING SYSTEM
+BENCHMARK RESULTS
+
+Student: Tran Nguyen Hai Dang
+Student ID: SE202009
+
+Platform:
+  ARM vexpress-a9 / QEMU
+  Linux kernel 5.15
+
+Test configuration:
+  Sampling interval: 100 ms
+  Approximate measured duration: 120.502 seconds
+
+Measured results:
+  Samples processed: 1043
+  Minimum jitter: 5347.000 us
+  Maximum jitter: 6567.000 us
+  Mean jitter: 6252.963 us
+  Standard deviation: 70.251 us
+
+Driver statistics:
+  Last temperature: 37.7 C
+  Last humidity: 65.3%
+  Sampling interval: 100 ms
+  Last read timestamp: 120502 ms
+
+Application shutdown:
+  Sensor thread stopped
+  Processor thread stopped
+  Alert thread stopped
+  Logger thread stopped
+  Main shutdown complete
+
+Note:
+  Measurements were obtained in QEMU.
+  Virtualization and host scheduling affect timing results.
+  These measurements should not be interpreted as physical
+  hardware performance.

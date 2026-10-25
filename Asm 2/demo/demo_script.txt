@@ -1,0 +1,94 @@
+============================================================
+ASSIGNMENT 02 - EMBEDDED LINUX
+Student: Tran Nguyen Hai Dang
+Student ID: SE202009
+Project: SMS Sensor Monitoring System
+Platform: ARM vexpress-a9 / QEMU
+============================================================
+
+[DEMO 1] PROJECT STRUCTURE
+Command:
+cd ~/asm2_work/task1_work
+find driver app tests -maxdepth 2 -type f | sort
+
+[DEMO 2] KERNEL DRIVER ARTIFACTS
+Command:
+ls -l driver/sms_sensor_driver.ko
+file driver/sms_sensor_driver.ko
+
+[DEMO 3] NATIVE UNIT TEST
+Command:
+./tests/test_circular_buffer
+
+[DEMO 4] QEMU APPLICATION TEST
+Boot QEMU using output/initramfs_asgn2_app.cpio.gz.
+At the QEMU shell, run:
+
+ls -l /dev/sms_sensor
+cat /proc/sms_stats
+
+[DEMO 5] RUN SENSOR APPLICATION
+Command:
+ /usr/bin/sms_app -i 500
+
+Expected observations:
+- Sensor Thread reads sensor samples.
+- Processor Thread processes samples.
+- Alert Thread handles alarm messages.
+- Logger Thread records application events.
+
+Press Ctrl+C to test graceful shutdown.
+
+[DEMO 6] TIMING BENCHMARK
+Command:
+ /usr/bin/sms_app -i 100
+
+Expected observations:
+- Timing statistics are reported every 1000 samples.
+- Final timing statistics are reported when the application stops.
+- At least 1000 timing samples should be collected.
+
+Press Ctrl+C to stop the application gracefully.
+
+[DEMO 7] DRIVER STATISTICS
+Command:
+cat /proc/sms_stats
+
+Record the following:
+- read_count
+- last_temperature
+- last_humidity
+- uptime_seconds
+- interval_ms
+- last_read_ms
+
+[DEMO 8] SHUTDOWN VERIFICATION
+Expected output includes:
+[Main] Beginning orderly shutdown
+[Processor] Thread stopped
+[Alert] Thread stopped
+[Logger] Thread stopped
+[Sensor] Thread stopped
+[Main] Shutdown complete
+
+============================================================
+END OF DEMO CHECKLIST
+============================================================
+
+[DEMO 9] VERIFY SAVED BENCHMARK RESULTS
+Run on the Ubuntu host:
+
+cd ~/asm2_work/task1_work
+
+grep '\[Timing\]' demo/benchmark_results.txt
+
+Expected primary benchmark:
+- samples=1642
+- jitter min=4115.000 us
+- jitter max=9000.000 us
+- mean=5493.395 us
+- stddev=527.422 us
+
+Note:
+The 162-sample result is an additional validation run, not the
+primary 1642-sample benchmark.
